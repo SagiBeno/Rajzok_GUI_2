@@ -5,27 +5,29 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.example.rajzok_gui.RajzokController"
+>
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="Fájl">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Megnyitás" />
-                  <MenuItem mnemonicParsing="false" text="Mentés" />
-              <MenuItem mnemonicParsing="false" text="Kilépés" />
+                  <MenuItem fx:id="menuitemMegnyitas" id="menuitemMegnyitas" mnemonicParsing="false" text="Megnyitás" />
+                  <MenuItem fx:id="menuitemMentes" id="menuitemMentes" mnemonicParsing="false" text="Mentés" />
+              <MenuItem fx:id="menuitemKilepes" id="menuitemKilepes" mnemonicParsing="false" text="Kilépés" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Gondol">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Különböző" />
-              <MenuItem mnemonicParsing="false" text="Egyforma" />
-                  <MenuItem mnemonicParsing="false" text="Első" />
+                  <MenuItem fx:id="menuitemKulonbozo" id="menuitemKulonbozo" mnemonicParsing="false" text="Különböző" />
+              <MenuItem fx:id="menuitemEgyforma" id="menuitemEgyforma" mnemonicParsing="false" text="Egyforma" />
+                  <MenuItem fx:id="menuitemElso" id="menuitemElso" mnemonicParsing="false" text="Első" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Súgó">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Névjegy" />
+                  <MenuItem fx:id="menuitemNevjegy" id="menuitemNevjegy" mnemonicParsing="false" text="Névjegy" />
             </items>
           </Menu>
         </menus>
@@ -46,16 +48,28 @@
                 <RowConstraints maxHeight="152.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ImageView fitHeight="125.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <ImageView fitHeight="125.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <ImageView fitHeight="125.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <ImageView fitHeight="125.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button minWidth="140.0" mnemonicParsing="false" text="Hozzáad" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button minWidth="140.0" mnemonicParsing="false" text="Módosít" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                  <Button minWidth="140.0" mnemonicParsing="false" text="Töröl" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <ImageView fx:id="imageView1" id="imageView1" fitHeight="125.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@rajzok/baba.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="imageView2" id="imageView2" fitHeight="125.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@rajzok/vonat.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="imageView3" id="imageView3" fitHeight="125.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@rajzok/hajo.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="imageView4" id="imageView4" fitHeight="125.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@rajzok/hintalo.png" />
+                     </image></ImageView>
+                  <Button fx:id="buttonHoozaad" id="buttonHoozaad" minWidth="140.0" mnemonicParsing="false" text="Hozzáad" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="buttonModosit" id="buttonModosit" minWidth="140.0" mnemonicParsing="false" text="Módosít" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <Button fx:id="buttonTorol" id="buttonTorol" minWidth="140.0" mnemonicParsing="false" text="Töröl" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
-            <ListView prefHeight="200.0" prefWidth="200.0">
+            <ListView fx:id="listview" id="listview" prefHeight="200.0" prefWidth="200.0">
                <VBox.margin>
                   <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </VBox.margin>
