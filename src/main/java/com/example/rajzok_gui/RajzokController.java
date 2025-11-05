@@ -1,6 +1,9 @@
 package com.example.rajzok_gui;
 
 import javafx.application.Platform;
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -171,6 +174,24 @@ public class RajzokController implements Initializable {
 
     public void handleHozzaad() {
 
+        StringBuilder listviewData = new StringBuilder();
+
+        for (int i = 0; i < pos4.size(); i++) {
+            String key = pos4.get(i).keySet().toString();
+            key = key.substring(1, key.length() - 1);
+            int idx = 1;
+
+            for (int j = 0; j < kepnev.length; j++) {
+                if (Objects.equals(kepnev[j], key)) idx = j;
+            }
+
+            listviewData.append(nev[idx]).append(" + ");
+        }
+
+        listviewData = listviewData.delete( listviewData.length() - 3, listviewData.length() -1 );
+        ObservableList<String> observableList = listview.getItems();
+        observableList.add(String.valueOf(listviewData));
+        listview.setItems(observableList);
     }
 
     public void handleModosit() {
