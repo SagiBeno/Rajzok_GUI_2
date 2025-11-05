@@ -39,7 +39,6 @@ public class RajzokController implements Initializable {
     @FXML public ImageView menuitemImageElso;
     @FXML public ImageView menuitemImageNevjegy;
 
-
     // Strore data
     public String[] nev = {"Baba", "Hajó", "Hintaló", "Nyuszi", "Repülő", "T-Rex", "Vonat"};
     public String[] kepnev = {"baba", "hajo", "hintalo", "nyuszi", "repulo", "tirex", "vonat"};
@@ -59,6 +58,47 @@ public class RajzokController implements Initializable {
 
         // TODO - style image squares
 
+    }
+
+    public void handleImageClick(int idx) {
+        int newId = (int) (Math.random() * kep.length);
+        switch (idx) {
+            case 1: {
+                imageView1.setImage(kep[newId]);
+                break;
+            }
+
+            case 2: {
+                imageView2.setImage(kep[newId]);
+                break;
+            }
+
+            case 3: {
+                imageView3.setImage(kep[newId]);
+                break;
+            }
+
+            case 4: {
+                imageView4.setImage(kep[newId]);
+                break;
+            }
+        }
+    }
+
+    public void handleImage1Click() {
+        handleImageClick(1);
+    }
+
+    public void handleImage2Click() {
+        handleImageClick(2);
+    }
+
+    public void handleImage3Click() {
+        handleImageClick(3);
+    }
+
+    public void handleImage4Click() {
+        handleImageClick(4);
     }
 
     public void handleMegnyitas() {
