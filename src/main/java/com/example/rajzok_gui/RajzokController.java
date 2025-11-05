@@ -153,7 +153,20 @@ public class RajzokController implements Initializable {
     }
 
     public void handleKulonbozo() {
+        ArrayList<Integer> indices = new ArrayList<>();
 
+        for (int i = 0; i < 4; i++) {
+            int idx = (int) (Math.random() * kep.length);
+            while (indices.contains(idx)) {
+                idx = (int) (Math.random() * kep.length);
+            }
+            indices.add(idx);
+        }
+
+        imageView1.setImage(kep[indices.get(0)]);
+        imageView2.setImage(kep[indices.get(1)]);;
+        imageView3.setImage(kep[indices.get(2)]);
+        imageView4.setImage(kep[indices.get(3)]);
     }
 
     public void handleEgyforma() {
