@@ -3,7 +3,7 @@ package com.example.rajzok_gui;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class RajzokController {
     @FXML
     private Label welcomeText;
 
