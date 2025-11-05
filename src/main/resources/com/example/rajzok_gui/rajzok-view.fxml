@@ -43,9 +43,9 @@
                      </graphic></MenuItem>
               <MenuItem id="menuitemEgyforma" fx:id="menuitemEgyforma" mnemonicParsing="false" onAction="#handleEgyforma" text="Egyforma">
                      <graphic>
-                        <ImageView id="menuitemImage5" fx:id="menuitemImageEgyforma" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView id="menuitemImageEgyforma" fx:id="menuitemImageEgyforma" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic></MenuItem>
-                  <MenuItem id="menuitemImageEgyforma" fx:id="menuitemElso" mnemonicParsing="false" onAction="#handleElso" text="Első">
+                  <MenuItem id="menuitemElso" fx:id="menuitemElso" mnemonicParsing="false" onAction="#handleElso" text="Első">
                      <graphic>
                         <ImageView id="menuitemImageElso" fx:id="menuitemImageElso" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic></MenuItem>
