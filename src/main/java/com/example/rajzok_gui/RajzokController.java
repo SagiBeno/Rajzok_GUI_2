@@ -83,25 +83,43 @@ public class RajzokController implements Initializable {
     }
 
     public void handleImageClick(int idx) {
-        int newId = (int) (Math.random() * kep.length);
+        int newId = idx;
+        while (newId == idx) newId = (int) (Math.random() * kep.length);
+
         switch (idx) {
             case 1: {
                 imageView1.setImage(kep[newId]);
+                pos4.get(0).clear();
+                Map<String, Image> map = new HashMap<>();
+                map.put(kepnev[idx], kep[idx]);
+                pos4.add(map);
                 break;
             }
 
             case 2: {
                 imageView2.setImage(kep[newId]);
+                pos4.get(1).clear();
+                Map<String, Image> map = new HashMap<>();
+                map.put(kepnev[idx], kep[idx]);
+                pos4.add(map);
                 break;
             }
 
             case 3: {
                 imageView3.setImage(kep[newId]);
+                pos4.get(2).clear();
+                Map<String, Image> map = new HashMap<>();
+                map.put(kepnev[idx], kep[idx]);
+                pos4.add(map);
                 break;
             }
 
             case 4: {
                 imageView4.setImage(kep[newId]);
+                pos4.get(3).clear();
+                Map<String, Image> map = new HashMap<>();
+                map.put(kepnev[idx], kep[idx]);
+                pos4.add(map);
                 break;
             }
         }
