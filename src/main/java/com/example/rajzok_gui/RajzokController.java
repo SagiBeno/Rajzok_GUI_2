@@ -92,37 +92,33 @@ public class RajzokController implements Initializable {
         switch (idx) {
             case 1: {
                 imageView1.setImage(kep[newId]);
-                pos4.get(0).clear();
                 Map<String, Image> map = new HashMap<>();
-                map.put(kepnev[idx], kep[idx]);
-                pos4.add(map);
+                map.put(kepnev[newId], kep[newId]);
+                pos4.set(0, map);
                 break;
             }
 
             case 2: {
                 imageView2.setImage(kep[newId]);
-                pos4.get(1).clear();
                 Map<String, Image> map = new HashMap<>();
-                map.put(kepnev[idx], kep[idx]);
-                pos4.add(map);
+                map.put(kepnev[newId], kep[newId]);
+                pos4.set(1, map);
                 break;
             }
 
             case 3: {
                 imageView3.setImage(kep[newId]);
-                pos4.get(2).clear();
                 Map<String, Image> map = new HashMap<>();
-                map.put(kepnev[idx], kep[idx]);
-                pos4.add(map);
+                map.put(kepnev[newId], kep[newId]);
+                pos4.set(2, map);
                 break;
             }
 
             case 4: {
                 imageView4.setImage(kep[newId]);
-                pos4.get(3).clear();
                 Map<String, Image> map = new HashMap<>();
-                map.put(kepnev[idx], kep[idx]);
-                pos4.add(map);
+                map.put(kepnev[newId], kep[newId]);
+                pos4.set(3, map);
                 break;
             }
         }
