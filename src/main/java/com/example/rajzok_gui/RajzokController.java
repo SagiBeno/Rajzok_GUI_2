@@ -1,5 +1,7 @@
 package com.example.rajzok_gui;
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -48,6 +50,46 @@ public class RajzokController implements Initializable {
         }
 
         // TODO - style image squares
+
+    }
+
+    public void handleMegnyitas() {
+
+    }
+
+    public void handleMentes() {
+
+    }
+
+    public void handleKilepes() {
+        Platform.exit();
+    }
+
+    public void handleKulonbozo() {
+
+    }
+
+    public void handleEgyforma() {
+
+    }
+
+    public void handleElso() {
+
+    }
+
+    public void handleNevjegy() {
+
+    }
+
+    public void handleHozzaad() {
+
+    }
+
+    public void handleModosit() {
+
+    }
+
+    public void handleTorol() {
 
     }
 }
