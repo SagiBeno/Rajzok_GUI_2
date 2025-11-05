@@ -170,7 +170,11 @@ public class RajzokController implements Initializable {
     }
 
     public void handleEgyforma() {
-
+        int idx = (int) (Math.random() * kep.length);
+        imageView1.setImage(kep[idx]);
+        imageView2.setImage(kep[idx]);
+        imageView3.setImage(kep[idx]);
+        imageView4.setImage(kep[idx]);
     }
 
     public void handleElso() {
