@@ -11,24 +11,51 @@
         <menus>
           <Menu mnemonicParsing="false" text="Fájl">
             <items>
-                  <MenuItem id="menuitemMegnyitas" fx:id="menuitemMegnyitas" mnemonicParsing="false" text="Megnyitás" onAction="#handleMegnyitas">
+                  <MenuItem id="menuitemMegnyitas" fx:id="menuitemMegnyitas" mnemonicParsing="false" onAction="#handleMegnyitas" text="Megnyitás">
                      <graphic>
-                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView id="menuitemImageMegnyitas" fx:id="menuitemImageMegnyitas" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/open.png" />
+                           </image></ImageView>
                      </graphic></MenuItem>
-                  <MenuItem id="menuitemMentes" fx:id="menuitemMentes" mnemonicParsing="false" text="Mentés" onAction="#handleMentes"/>
-              <MenuItem id="menuitemKilepes" fx:id="menuitemKilepes" mnemonicParsing="false" text="Kilépés" onAction="#handleKilepes" />
+                  <MenuItem id="menuitemMentes" fx:id="menuitemMentes" mnemonicParsing="false" onAction="#handleMentes" text="Mentés">
+                     <graphic>
+                        <ImageView id="menuitemImageMentes" fx:id="menuitemImageMentes" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/save.png" />
+                           </image></ImageView>
+                     </graphic></MenuItem>
+              <MenuItem id="menuitemKilepes" fx:id="menuitemKilepes" mnemonicParsing="false" onAction="#handleKilepes" text="Kilépés">
+                     <graphic>
+                        <ImageView id="menuitemImageKilepes" fx:id="menuitemImageKilepes" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/exit.png" />
+                           </image></ImageView>
+                     </graphic></MenuItem>
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Gondol">
             <items>
-                  <MenuItem id="menuitemKulonbozo" fx:id="menuitemKulonbozo" mnemonicParsing="false" text="Különböző" onAction="#handleKulonbozo"/>
-              <MenuItem id="menuitemEgyforma" fx:id="menuitemEgyforma" mnemonicParsing="false" text="Egyforma" onAction="#handleEgyforma"/>
-                  <MenuItem id="menuitemElso" fx:id="menuitemElso" mnemonicParsing="false" text="Első" onAction="#handleElso"/>
+                  <MenuItem id="menuitemKulonbozo" fx:id="menuitemKulonbozo" mnemonicParsing="false" onAction="#handleKulonbozo" text="Különböző">
+                     <graphic>
+                        <ImageView id="menuitemImageKulonbozo" fx:id="menuitemImageKulonbozo" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></MenuItem>
+              <MenuItem id="menuitemEgyforma" fx:id="menuitemEgyforma" mnemonicParsing="false" onAction="#handleEgyforma" text="Egyforma">
+                     <graphic>
+                        <ImageView id="menuitemImage5" fx:id="menuitemImageEgyforma" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></MenuItem>
+                  <MenuItem id="menuitemImageEgyforma" fx:id="menuitemElso" mnemonicParsing="false" onAction="#handleElso" text="Első">
+                     <graphic>
+                        <ImageView id="menuitemImageElso" fx:id="menuitemImageElso" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></MenuItem>
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Súgó">
             <items>
-                  <MenuItem id="menuitemNevjegy" fx:id="menuitemNevjegy" mnemonicParsing="false" text="Névjegy" onAction="#handleNevjegy" />
+                  <MenuItem id="menuitemNevjegy" fx:id="menuitemNevjegy" mnemonicParsing="false" onAction="#handleNevjegy" text="Névjegy">
+                     <graphic>
+                        <ImageView id="menuitemImageNevjegy" fx:id="menuitemImageNevjegy" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></MenuItem>
             </items>
           </Menu>
         </menus>
@@ -53,11 +80,11 @@
                   <ImageView id="imageView2" fx:id="imageView2" fitHeight="108.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <ImageView id="imageView3" fx:id="imageView3" fitHeight="108.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                   <ImageView id="imageView4" fx:id="imageView4" fitHeight="108.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <Button id="buttonHoozaad" fx:id="buttonHoozaad" minWidth="108.0" mnemonicParsing="false" text="Hozzáad" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" onAction="#handleHozzaad">
+                  <Button id="buttonHoozaad" fx:id="buttonHoozaad" minWidth="108.0" mnemonicParsing="false" onAction="#handleHozzaad" text="Hozzáad" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                   </Button>
-                  <Button id="buttonModosit" fx:id="buttonModosit" minWidth="108.0" mnemonicParsing="false" text="Módosít" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" onAction="#handleModosit">
+                  <Button id="buttonModosit" fx:id="buttonModosit" minWidth="108.0" mnemonicParsing="false" onAction="#handleModosit" text="Módosít" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                   </Button>
-                  <Button id="buttonTorol" fx:id="buttonTorol" minWidth="108.0" mnemonicParsing="false" text="Töröl" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" onAction="#handleTorol">
+                  <Button id="buttonTorol" fx:id="buttonTorol" minWidth="108.0" mnemonicParsing="false" onAction="#handleTorol" text="Töröl" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                   </Button>
                </children>
             </GridPane>

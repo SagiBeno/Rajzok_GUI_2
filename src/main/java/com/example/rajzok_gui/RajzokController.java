@@ -31,6 +31,14 @@ public class RajzokController implements Initializable {
     @FXML public Button buttonModosit;
     @FXML public Button buttonTorol;
     @FXML public ListView<String> listview;
+    @FXML public ImageView menuitemImageMegnyitas;
+    @FXML public ImageView menuitemImageMentes;
+    @FXML public ImageView menuitemImageKilepes;
+    @FXML public ImageView menuitemImageKulonbozo;
+    @FXML public ImageView menuitemImageEgyforma;
+    @FXML public ImageView menuitemImageElso;
+    @FXML public ImageView menuitemImageNevjegy;
+
 
     // Strore data
     public String[] nev = {"Baba", "Hajó", "Hintaló", "Nyuszi", "Repülő", "T-Rex", "Vonat"};
