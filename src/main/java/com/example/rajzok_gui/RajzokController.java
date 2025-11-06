@@ -16,10 +16,12 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.*;
 
@@ -148,12 +150,52 @@ public class RajzokController implements Initializable {
         handleImageClick(4);
     }
 
-    public void handleMegnyitas() {
+    public void handleMegnyitas() throws FileNotFoundException {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Fájl megnyitása...");
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
 
+        Stage stage = (Stage) listview.getScene().getWindow();
+
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        Scanner fileScanner = new Scanner(selectedFile);
+        ArrayList<String> rows = new ArrayList<>();
+
+        while (fileScanner.hasNextLine()) {
+            String line = fileScanner.nextLine();
+            String[] split = line.split("\t");
+
+            for (String a : split) {
+                rows.add(a);
+            }
+        }
+        fileScanner.close();
+
+        ObservableList<String> data = FXCollections.observableList(rows);
+        listview.setItems(data);
     }
 
-    public void handleMentes() {
+    public void handleMentes() throws IOException {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Fájl megnyitása...");
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
 
+        Stage stage = (Stage) listview.getScene().getWindow();
+
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        FileWriter writer = new FileWriter(selectedFile);
+
+        StringBuilder data = new StringBuilder();
+        if (!listview.getItems().isEmpty()) {
+            ObservableList<String> listviewItems = listview.getItems();
+
+            for (String a : listviewItems) {
+                data.append(a).append("\n");
+            }
+        }
+
+        writer.append(data);
+        writer.close();
     }
 
     public void handleKilepes() {
