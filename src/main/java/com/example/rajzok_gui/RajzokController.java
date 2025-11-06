@@ -5,13 +5,20 @@ import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -178,11 +185,27 @@ public class RajzokController implements Initializable {
     }
 
     public void handleElso() {
+        String key = pos4.getFirst().keySet().toString();
+        key = key.substring(1, key.length() - 1);
+        int idx = 0;
 
+        for (int i = 0; i < kepnev.length; i++) {
+            if (Objects.equals(kepnev[i], key)) idx = i;
+        }
+
+        int randomIdx = (int) (Math.random() * kepnev.length);
+        while (idx == randomIdx) randomIdx = (int) (Math.random() * kepnev.length);
+        imageView1.setImage(kep[randomIdx]);
     }
 
-    public void handleNevjegy() {
-
+    public void handleNevjegy() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(RajzokApplication.class.getResource("nevjegy-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 300, 300);
+        stage.getIcons().add(new Image("file:rajzok.png"));
+        stage.setTitle("Rajzok - Névjegy");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void handleHozzaad() {
