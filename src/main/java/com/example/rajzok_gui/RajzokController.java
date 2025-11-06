@@ -208,6 +208,32 @@ public class RajzokController implements Initializable {
     }
 
     public void handleModosit() {
+        int idx = listview.getSelectionModel().getSelectedIndex();
+        ObservableList<String> listviewItems = listview.getItems();
+        int imageIdx = 0;
+
+        if (idx >= 0) {
+
+            StringBuilder listviewData = new StringBuilder();
+
+            for (int i = 0; i < pos4.size(); i++) {
+
+                String key = pos4.get(i).keySet().toString();
+                key = key.substring(1, key.length() - 1);
+
+                for (int j = 0; j < kepnev.length; j++) {
+
+                    if (Objects.equals(kepnev[j], key)) imageIdx = j;
+                }
+
+                listviewData.append(nev[imageIdx]).append(" + ");
+            }
+
+            listviewData = listviewData.delete( listviewData.length() - 3, listviewData.length() -1 );
+            listviewItems.set(idx, String.valueOf(listviewData));
+            listview.setItems(listviewItems);
+        }
+
 
     }
 
