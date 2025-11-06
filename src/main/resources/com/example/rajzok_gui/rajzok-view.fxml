@@ -73,10 +73,26 @@
                 <RowConstraints maxHeight="152.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ImageView fx:id="imageView1" fitHeight="108.0" fitWidth="108.0" onMouseClicked="#handleImage1Click" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <ImageView id="imageView2" fx:id="imageView2" fitHeight="108.0" fitWidth="108.0" onMouseClicked="#handleImage2Click" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <ImageView id="imageView3" fx:id="imageView3" fitHeight="108.0" fitWidth="108.0" onMouseClicked="#handleImage3Click" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                  <ImageView id="imageView4" fx:id="imageView4" fitHeight="108.0" fitWidth="108.0" onMouseClicked="#handleImage4Click" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <VBox id="imageview1VBox" fx:id="imageview1VBox" maxHeight="108.0" maxWidth="108.0" minHeight="108.0" minWidth="108.0" prefHeight="108.0" prefWidth="108.0" style="-fx-background-color: #ffffdd; -fx-border-color: black; -fx-border-width: 1px;" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView fx:id="imageView1" fitHeight="108.0" fitWidth="108.0" onMouseClicked="#handleImage1Click" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+                  <VBox id="imageview2VBox" fx:id="imageview2VBox" maxHeight="108.0" maxWidth="108.0" minHeight="108.0" minWidth="108.0" prefHeight="108.0" prefWidth="108.0" style="-fx-background-color: #ffffdd; -fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView id="imageView2" fx:id="imageView2" fitHeight="108.0" fitWidth="108.0" onMouseClicked="#handleImage2Click" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+                  <VBox id="imageview3VBox" fx:id="imageview3VBox" maxHeight="108.0" maxWidth="108.0" minHeight="108.0" minWidth="108.0" prefHeight="108.0" prefWidth="108.0" style="-fx-background-color: #ffffdd; -fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView id="imageView3" fx:id="imageView3" fitHeight="108.0" fitWidth="108.0" onMouseClicked="#handleImage3Click" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+                  <VBox id="imageview4VBox" fx:id="imageview4VBox" maxHeight="108.0" maxWidth="108.0" minHeight="108.0" minWidth="108.0" prefHeight="108.0" prefWidth="108.0" style="-fx-background-color: #ffffdd; -fx-border-color: black; -fx-border-width: 1px;" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <children>
+                        <ImageView id="imageView4" fx:id="imageView4" fitHeight="108.0" fitWidth="108.0" onMouseClicked="#handleImage4Click" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
                   <Button id="buttonHoozaad" fx:id="buttonHoozaad" minWidth="108.0" mnemonicParsing="false" onAction="#handleHozzaad" text="Hozzáad" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">

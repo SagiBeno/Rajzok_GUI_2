@@ -15,6 +15,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -45,7 +46,11 @@ public class RajzokController implements Initializable {
     @FXML public ImageView menuitemImageKulonbozo;
     @FXML public ImageView menuitemImageEgyforma;
     @FXML public ImageView menuitemImageElso;
-    @FXML public ImageView menuitemImageNevjegy;
+    @FXML public VBox imageview1VBox;
+    @FXML public VBox imageview2VBox;
+    @FXML public VBox imageview3VBox;
+    @FXML public VBox imageview4VBox;
+
 
     // Strore data
     public String[] nev = {"Baba", "Vonat", "Hajó", "Hintaló", "Nyuszi", "Repülő", "T-Rex"};
@@ -54,7 +59,6 @@ public class RajzokController implements Initializable {
 
     // store 4 of map: baba -> image
     public List<Map<String, Image>> pos4 = new ArrayList<>();
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // load initial images
@@ -87,9 +91,6 @@ public class RajzokController implements Initializable {
                 pos4.add(map);
             }
         }
-
-        // TODO - style image squares
-
     }
 
     public void handleImageClick(int idx) {
