@@ -233,11 +233,15 @@ public class RajzokController implements Initializable {
             listviewItems.set(idx, String.valueOf(listviewData));
             listview.setItems(listviewItems);
         }
-
-
     }
 
     public void handleTorol() {
+        int idx = listview.getSelectionModel().getSelectedIndex();
+        ObservableList<String> listviewItems = listview.getItems();
 
+        if (idx >= 0) {
+            listviewItems.remove(idx);
+            listview.setItems(listviewItems);
+        }
     }
 }
